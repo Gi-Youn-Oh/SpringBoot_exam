@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member List</title>
+</head>
+<body>
+    <h1>Member List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Name</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 반환받은 데이터를 반복하여 리스트로 보여주기 -->
+            <tr th:each="member : ${members}">
+                <td th:text="${member.email}">Email</td>
+                <td th:text="${member.name}">Name</td>
+                <td th:text="${member.pwd}">Password</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
