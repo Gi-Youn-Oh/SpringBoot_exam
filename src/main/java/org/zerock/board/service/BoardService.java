@@ -10,7 +10,9 @@ public interface BoardService {
     Long register(BoardDTO dto);
 
     //void modify(BoardDTO boardDTO);
-
+    
+    void remove(Long bno); // 삭제 메서드 추가
+    
     default Board dtoToEntity(BoardDTO dto){
 
         Member member = Member.builder().email(dto.getWriterEmail()).build();

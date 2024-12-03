@@ -31,8 +31,11 @@ public class BoardServiceImpl implements BoardService{
         return board.getBno();
     }
 
-  
+    @Override
+    public void remove(Long bno) {
+        log.info("Delete Board ID: " + bno);
+        repository.deleteById(bno); // 엔티티 삭제
+    }
    
-
 	
 };
